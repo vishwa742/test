@@ -15,7 +15,4 @@ app = Flask(__name__)
 def index():
     return 'Congratulations! Your part 2 endpoint is working'
 
-  app.register_blueprint(user_blueprint, url_prefix='/api/v1/users')
-  app.register_blueprint(blogpost_blueprint, url_prefix='/api/v1/blogposts')
 
- 
