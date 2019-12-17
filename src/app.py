@@ -9,6 +9,8 @@ from .models import db, bcrypt
 from .views.UserView import user_api as user_blueprint
 from .views.BlogpostView import blogpost_api as blogpost_blueprint
 
+app.register_blueprint(user_blueprint, url_prefix='/api/v1/users')
+app.register_blueprint(blogpost_blueprint, url_prefix='/api/v1/blogposts')
 
   # app initiliazation
 app = Flask(__name__)
@@ -22,5 +24,4 @@ def index():
 # bcrypt.init_app(app)
 #  db.init_app(app)
 
-app.register_blueprint(user_blueprint, url_prefix='/api/v1/users')
-app.register_blueprint(blogpost_blueprint, url_prefix='/api/v1/blogposts')
+
